@@ -1,8 +1,9 @@
 <h4>Welcome to Server Manager 4.0</h4>
 <p>Manage your Servers and Users.</p>
 
-<button class="btn btn-success btn-sm" (click)="onLoadServer(1)">Load Server 1</button>
-<button class="btn btn-success btn-sm" style="margin-inline:5px;" (click)="onLogin()"> Login </button>
-<button class="btn btn-danger btn-sm" (click)="onLogout()"> Logout </button>
+<!-- <button class="btn btn-success btn-sm" (click)="onLoadServer(1)">Load Server 1</button> -->
+
+<button class="btn btn-success btn-sm" style="margin-inline:3px;" (click)="onLogin()" *ngIf="!this.authService.loggedIn"> Login </button>
+<button class="btn btn-danger btn-sm"  style="margin-inline:3px;" (click)="onLogout()" *ngIf="this.authService.loggedIn" > Logout </button>
 
 
